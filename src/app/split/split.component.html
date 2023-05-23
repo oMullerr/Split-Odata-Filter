@@ -1,0 +1,4 @@
+<input [(ngModel)]="frase" placeholder="Digite uma frase">
+<button (click)="splitFrase()">Split</button>
+<button (click)="limparInput()">Limpar</button>
+<p *ngFor="let palavra of palavras">{{ palavra }}</p>
