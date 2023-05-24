@@ -1,4 +1,17 @@
-<input [(ngModel)]="frase" placeholder="Digite uma frase">
-<button (click)="splitFrase()">Split</button>
-<button (click)="limparInput()">Limpar</button>
-<p *ngFor="let palavra of palavras">{{ palavra }}</p>
+<div class="container">
+  <div class="row w-100" style="margin-left: 30%;">
+    <div class="col-12" style="margin-top: 10%;">
+      <input [(ngModel)]="frase" style="width: 30%;" placeholder="Filtre por código, descrição ou centro de custo">
+    </div>
+
+    <div class="col" style="margin-top: 10px;">
+      <button (click)="splitFrase()" class="btn btn-primary">Split</button>
+      <button (click)="limparInput()" class="btn btn-secondary" style="margin-left: 20px;">Limpar</button>
+      <p *ngFor="let palavra of palavras" class="mt-2" style="margin-left: 30px; margin-top: 15px;">{{ palavra }}</p>
+    </div>
+  </div>
+</div>
+
+<pre>
+  {{ palavras | json }}
+</pre>
